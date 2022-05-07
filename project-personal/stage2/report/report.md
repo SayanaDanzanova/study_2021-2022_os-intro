@@ -1,8 +1,8 @@
 ---
 ## Front matter
-title: "Шаблон отчёта по лабораторной работе"
-subtitle: "Простейший вариант"
-author: "Дмитрий Сергеевич Кулябов"
+title: "Индивидуальный проект"
+subtitle: "Этап второй"
+author: "Данзанова Саяна Зоригтоевна"
 
 ## Generic otions
 lang: ru-RU
@@ -23,12 +23,12 @@ papersize: a4
 documentclass: scrreprt
 ## I18n polyglossia
 polyglossia-lang:
-  name: russian
-  options:
-	- spelling=modern
-	- babelshorthands=true
+name: russian
+options:
+- spelling=modern
+- babelshorthands=true
 polyglossia-otherlangs:
-  name: english
+name: english
 ## I18n babel
 babel-lang: russian
 babel-otherlangs: english
@@ -45,12 +45,12 @@ monofontoptions: Scale=MatchLowercase,Scale=0.9
 biblatex: true
 biblio-style: "gost-numeric"
 biblatexoptions:
-  - parentracker=true
-  - backend=biber
-  - hyperref=auto
-  - language=auto
-  - autolang=other*
-  - citestyle=gost-numeric
+- parentracker=true
+- backend=biber
+- hyperref=auto
+- language=auto
+- autolang=other*
+- citestyle=gost-numeric
 ## Pandoc-crossref LaTeX customization
 figureTitle: "Рис."
 tableTitle: "Таблица"
@@ -61,59 +61,42 @@ lolTitle: "Листинги"
 ## Misc options
 indent: true
 header-includes:
-  - \usepackage{indentfirst}
-  - \usepackage{float} # keep figures where there are in the text
-  - \floatplacement{figure}{H} # keep figures where there are in the text
+- \usepackage{indentfirst}
+- \usepackage{float} # keep figures where there are in the text
+- \floatplacement{figure}{H} # keep figures where there are in the text
 ---
-
 # Цель работы
+Добавить к сайту данные о себе. Добавить пост на тему: "Управление версиями. Git."
 
-Здесь приводится формулировка цели лабораторной работы. Формулировки
-цели для каждой лабораторной работы приведены в методических
-указаниях.
+# Ход работы
+1. Список добавляемых данных.
+- Разместить фотографию владельца сайта.
+- Разместить краткое описание владельца сайта (Biography).
+- Добавить информацию об интересах (Interests).
+- Добавить информацию от образовании (Education).
 
-Цель данного шаблона --- максимально упростить подготовку отчётов по
-лабораторным работам.  Модифицируя данный шаблон, студенты смогут без
-труда подготовить отчёт по лабораторным работам, а также познакомиться
-с основными возможностями разметки Markdown.
+Сначала мы изменили данные о себе. Для этого необходимо зайти в файл content/authors/admin/_index.md и изменить там необходимые данные о себе (рис. 1). Также в папку content/authors/admin/ необходимо положить свою фотографию и назвать её avatar.jpg (рис. 2). Далее проверяем информацию на сайте. (рис. 3).
+![рис. 1](1.jpg){ #fig:001 width=90% }
 
-# Задание
+![рис. 2](2.jpg){ #fig:002 width=90% }
 
-Здесь приводится описание задания в соответствии с рекомендациями
-методического пособия и выданным вариантом.
+![рис. 3](3.jpg){ #fig:003 width=90% }
 
-# Теоретическое введение
+2. Пост по прошедшей неделе
+В шаблон добавила еонтент для поста.
+![рис. 4](4.jpg){ #fig:004 width=90% }
 
-Здесь описываются теоретические аспекты, связанные с выполнением работы.
+![рис. 5](5.jpg){ #fig:005 width=90% }
 
-Например, в табл. [-@tbl:std-dir] приведено краткое описание стандартных каталогов Unix.
+![рис. 6](6.jpg){ #fig:006 width=90% }
 
-: Описание некоторых каталогов файловой системы GNU Linux {#tbl:std-dir}
+3.	Добавить пост.
+Я выбраа тему Git. Решила не создавать новый пост и просто изменила старый. Для это я зашла в файл content/post/getting-started/index.md и изменила в нем контент для нашего поста. (рис. 4)
+![рис. 7](7.jpg){ #fig:007 width=90% }
 
-| Имя каталога | Описание каталога                                                                                                          |
-|--------------|----------------------------------------------------------------------------------------------------------------------------|
-| `/`          | Корневая директория, содержащая всю файловую                                                                               |
-| `/bin `      | Основные системные утилиты, необходимые как в однопользовательском режиме, так и при обычной работе всем пользователям     |
-| `/etc`       | Общесистемные конфигурационные файлы и файлы конфигурации установленных программ                                           |
-| `/home`      | Содержит домашние директории пользователей, которые, в свою очередь, содержат персональные настройки и данные пользователя |
-| `/media`     | Точки монтирования для сменных носителей                                                                                   |
-| `/root`      | Домашняя директория пользователя  `root`                                                                                   |
-| `/tmp`       | Временные файлы                                                                                                            |
-| `/usr`       | Вторичная иерархия для данных пользователя                                                                                 |
+![рис. 8](8.jpg){ #fig:008 width=90% }
 
-Более подробно об Unix см. в [@gnu-doc:bash;@newham:2005:bash;@zarrelli:2017:bash;@robbins:2013:bash;@tannenbaum:arch-pc:ru;@tannenbaum:modern-os:ru].
+![рис. 9](9.jpg){ #fig:009 width=90% }
 
-# Выполнение лабораторной работы
-
-Описываются проведённые действия, в качестве иллюстрации даётся ссылка на иллюстрацию (рис. [-@fig:001])
-
-![Название рисунка](image/placeimg_800_600_tech.jpg){ #fig:001 width=70% }
-
-# Выводы
-
-Здесь кратко описываются итоги проделанной работы.
-
-# Список литературы{.unnumbered}
-
-::: {#refs}
-:::
+# Вывод
+Я азобралась как обновлять данные о себе, а также создавать новый пост.
